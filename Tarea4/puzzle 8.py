@@ -119,7 +119,7 @@ if __name__ == "__main__":
     estado_inicial = Puzzle()
     estado_final = Puzzle()
 
-    estado_inicial.estado = list(input("Ingrese el estado inicial: "))
+    estado_inicial.estado = list(input("Ingrese el estado inicial (considere el espacio vacío como la tecla espacio): "))
     estado_final.estado = list(input("Ingrese el estado final: "))
 
     tiempoInicio = time.time()
