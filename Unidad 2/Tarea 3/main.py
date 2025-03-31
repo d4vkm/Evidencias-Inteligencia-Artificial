@@ -1,3 +1,0 @@
-import detectorDeSpam
-
-detectorDeSpam.leerDataset()
