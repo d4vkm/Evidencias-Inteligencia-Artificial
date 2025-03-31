@@ -25,6 +25,7 @@ def leerDataset():
 
 def formatearPalabras(palabrasDelMensaje):
     mensaje = str(palabrasDelMensaje).lower()
+    mensaje = str(palabrasDelMensaje).replace("[^a-zA-Z0-9 ]"," ")
     palabrasLematizadas= TextBlob(mensaje).words
     return [palabra.lemma for palabra in palabrasLematizadas]
 
@@ -32,9 +33,9 @@ datos = leerDataset()
 
 vectorDeEntrenamiento=CountVectorizer(analyzer=formatearPalabras).fit(datos.get('message'))
 
-#message10 = vectorDeEntrenamiento.transform([datos.get('message')[9]])
+mensaje1 = vectorDeEntrenamiento.transform([datos.get('message')[0]])
 
-#print(message10)
+print(mensaje1)
 
 #bolsa de palabras de todo el dataset:
 bolsaDePalabras = vectorDeEntrenamiento.fit_transform(datos.get('message').values)
@@ -47,8 +48,10 @@ detectorDeSpam=MultinomialNB().fit(mensajesTfIdf, datos.get('class').values)
 
 #Prueba:
 ejemplo=['FREE CASH $$$ click here for more information']
-ejemplo2=['hi dude, how are you?']
+ejemplo2=['hey dude, how are you?']
 
-resultado = detectorDeSpam.predict(vectorDeEntrenamiento.transform(ejemplo2))[0]
+resultado = detectorDeSpam.predict(vectorDeEntrenamiento.transform(ejemplo)[0])
+resultado2 = detectorDeSpam.predict(vectorDeEntrenamiento.transform(ejemplo2)[0])
 
-print(f'El mensaje "{ejemplo2[0]}" es {resultado}')
+print(f'El mensaje "{ejemplo[0]}" es {resultado[0]}')
+print(f'El mensaje "{ejemplo2[0]}" es {resultado2[0]}')
