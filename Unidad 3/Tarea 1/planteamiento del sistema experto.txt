@@ -1,0 +1,16 @@
+Sistema Experto para la predicción de Fallos Cardiacos
+Contexto: 
+Las enfermedades cardiovasculares (ECV) son la principal causa de muerte en todo el mundo, Se estima que alrededor de 17,9 millones de personas fallecieron 2019 como consecuencia de estas, lo cual representa alrededor de casi 1/3 de todas las muertes a nivel mundial. De dichas muertes 4/5 son por ataques cardiacos y accidentes cerebrovasculares, y de los 17 millones de muertes prematuras (menores a 70 Años) debidas a enfermedades no transmisibles, el 38% son atribuibles a enfermedades cardiovasculares. 
+Objetivo:
+Se busca desarrollar un sistema experto basado en heurísticas para predecir la probabilidad en un fallo cardiaco en pacientes, integrando los datos clínicos recopilados en un data set el cual contiene la información relevante al problema de pacientes que presentaron síntomas o poseen una enfermedad cardiovascular.
+Componentes del sistema experto:
+Como base de conocimiento medico se tendrá encuentran datos como el colesterol, presión arterial, tipo de dolor presentado y el nivel máximo de latidos sobre segundo.
+También se tomarán en cuenta datos históricos de pacientes.
+Se obtendrán los datos de data sets de salud como Heart Failure Clinical Records  o Heart Failure Prediction Dataset
+Datos de entrada
+Como datos de entrada se tomarán en cuenta variables clínicas como la edad, sexo, presión arterial, colesterol, diabetes, etc.
+Salida:
+Como salida nos arrojara la probabilidad de tener una enfermedad cardiaca de manera porcentual y si es baja, media o alta.
+Heart Failure Prediction Dataset: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
+Heart Failure Clinical Records:
+https://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records
