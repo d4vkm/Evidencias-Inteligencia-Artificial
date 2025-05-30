@@ -1,0 +1,13 @@
+train: /train/images
+val: /valid/images
+test: /test/images
+
+nc: 6
+names: ['anger', 'fear', 'happy', 'neutral', 'sad', 'surprise']
+
+roboflow:
+  workspace: dario-corrales
+  project: ddddddd-ofrrq-yp6rb
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/dario-corrales/ddddddd-ofrrq-yp6rb/dataset/1
